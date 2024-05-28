@@ -2,6 +2,7 @@
   width: 100vw
   min-height: 100vh
   margin: none
+
   header
     position: fixed
     top: 0
@@ -30,33 +31,34 @@
   section
     top: 0
     left: 0
+    margin-left: -10px
     min-height: 100vh
     min-width: 100vw !important
     display: flex
     justify-content: center
     align-items: center
-    background-color: transparent   
+    background-color: transparent
   section#home
     color: white
     display: flex
     background: rgb(24,7,19)
-    background: linear-gradient(180deg, rgba(24,7,19,1) 0%, rgba(27,8,21,1) 100%) 
+    background: linear-gradient(180deg, rgba(24,7,19,1) 0%, rgba(27,8,21,1) 100%)
     .left-text-cotainer
-      padding: 10rem  
+      padding: 10rem
       width: 100vw
       display: flex
       flex-direction: column
       justify-content: center
       align-items: start
       span
-          font-size: 72px
-          background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
-          -webkit-background-clip: text
-          -webkit-text-fill-color: transparent
+        font-size: 72px
+        background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
   section#about
     color: white
     background: rgb(24,7,19)
-    background: linear-gradient(180deg, rgba(27,8,21,1) 0%, rgba(41,12,32,1) 100%) 
+    background: linear-gradient(180deg, rgba(27,8,21,1) 0%, rgba(41,12,32,1) 100%)
     display: flex
     height: 100%
     justify-content: flex-start
@@ -68,8 +70,8 @@
       display: flex
       flex-direction: column
       font-size: 1.2em
+      color: #f8e7f3
       .caption
-        color: #f8e7f3
         height: 20%
         margin-bottom: 2.5rem
         display: flex
@@ -83,26 +85,47 @@
           font-size: 5.5rem
     .knowledge
       width: 30%
-      
-    
-      
+
   section#projects
     background: rgb(24,7,19)
     width: 100vw
     background: linear-gradient(180deg, rgba(41,12,32,1) 0%, rgba(55,16,43,1) 100%)
     display: flex
+    flex-direction: column
     justify-content: center
+    height: 100vh
     .caption
       display: flex
       justify-content: center
       align-items: center
-      width: 100vw 
-      height: 80vh
+      width: 100vw
+      height: 20%
+      font-size: 72px
+      background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+    .projects-container
+      width: 100vw
+      height: 70%
+      display: flex
+      align-items: center
+      justify-content: center
+      overflow: hidden
+      .scroll
+        width: 85%
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow-y: auto
+        .project-card
+          border-radius: 40px
+          margin: 50px
+          min-width: 500px
+          height: 600px
+          background-color: #82263a
+
   section#contact
     background: rgb(24,7,19)
     width: 100vw
-    background: linear-gradient(180deg, rgba(55,16,43,1) 0%, rgba(96,28,76,1) 100%) 
-
-    
-
-    
+    background: linear-gradient(180deg, rgba(55,16,43,1) 0%, rgba(96,28,76,1) 100%)
+    margin-bottom: -10px

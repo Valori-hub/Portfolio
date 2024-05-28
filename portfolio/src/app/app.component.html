@@ -1,49 +1,39 @@
 <div class="main-container">
   <header>
     <nav>
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" class="active">{{langData.pl.header.home}}</a>
+      <a href="#about">{{langData.pl.header.about}}</a>
+      <a href="#projects">{{langData.pl.header.projects}}</a>
+      <a href="#contact">{{langData.pl.header.contact}}</a>
     </nav>
   </header>
   <section id="home">
     <div class="left-text-cotainer">
-      <span data-aos="fade-in" data-aos-duration="500">Hi, I am Adam </span>
+      <span data-aos="fade-in" data-aos-duration="500">{{langData.pl.sectionHome.firstLine}}</span>
       <span data-aos="fade-in" data-aos-duration="3000">Developer</span>
     </div>
   </section>
   <section id="about">
     <div class="text-container">
-      <div class="caption"><span>About me</span></div>
+      <div class="caption"><span>{{langData.pl.sectionAbout.caption}}</span></div>
       <span
-        >My name is Adam and I am 22 years old. I am an aspiring programmer who
-        has been passionately developing my skills in the world of technology
-        since I received my first computer. At the beginning of my programming
-        journey, I was fascinated by game development. I decided to create an
-        adventure platformer with an interesting storyline and unique graphics,
-        despite having almost no budget. To achieve this, I started learning C#,
-        as the first engine I encountered was Unity. Unfortunately, over time, I
-        ran out of time and hands to work on the project, especially in the
-        field of model design, so the project was abandoned. My biggest dream is
-        to secure the funds to complete this project, which I consider to be my
-        "life project." Later, I shifted to less ambitious projects, such as
-        mobile games. In middle school, I developed an interest in web
-        development, and this passion continues to this day. Currently, I am
-        focusing on learning the Angular framework and the React library.
-        Although many of my projects lack documentation due to my neglect in
-        maintaining my GitHub, I am working to catch up and demonstrate that my
-        primary motivation is passion.
+        >{{langData.pl.sectionAbout.desription}}
       </span>
     </div>
     <div class="knowledge">
-      <div class="caption"><span>Knowledge</span></div>
+      <div class="caption"><span>{{langData.pl.sectionAbout.knowladge}}</span></div>
       <span></span>
     </div>
   </section>
   <section id="projects">
-    <div class="caption"><span>My projects</span></div>
-    <div class="projects-container"></div>
+    <div class="caption"><span>{{langData.pl.sectionProjects.caption}}</span></div>
+    <div class="projects-container">
+      <div class="scroll" >
+        <div class="project-card">
+            <h1></h1>
+        </div>
+      </div>
+    </div>
   </section>
   <section id="contact">Contact</section>
 </div>
