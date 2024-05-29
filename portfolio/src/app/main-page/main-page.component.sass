@@ -1,12 +1,11 @@
 .main-container
-  width: 100vw
+  min-width: 100vw
   min-height: 100vh
-  margin: none
   header
     position: fixed
     top: 0
     left: 0
-    padding: 20px 0px
+    padding: 20px 120px
     display: flex
     align-items: center
     justify-content: start
@@ -16,8 +15,9 @@
     height: 5vh
     nav
       width: 50%
+      height: 100%
       display: flex
-      justify-content: center
+      justify-content: start
       align-items: center
       a
         text-decoration: none
@@ -29,29 +29,28 @@
       a:hover,a.active
         color: #82263a
     .lang
-      width: 40%    
+      width: 40%
       height: 100%
       display: flex
       justify-content: end
       svg
         width: 50px
         margin-left: 40px
+        cursor: pointer
       svg:active
-        opacity: 0.7  
+        opacity: 0.7
 
   section
     top: 0
     left: 0
-    margin-left: -10px
     min-height: 100vh
-    min-width: 100vw !important
-    display: flex
-    justify-content: center
-    align-items: center
+    min-width: 100vw
     background-color: transparent
   section#home
     color: white
     display: flex
+    min-height: 100vh
+    min-width: 100vw
     background: rgb(24,7,19)
     background: linear-gradient(180deg, rgba(24,7,19,1) 0%, rgba(27,8,21,1) 100%)
     .left-text-cotainer
@@ -62,7 +61,7 @@
       justify-content: center
       align-items: start
       span
-        font-size: 72px
+        font-size: 8rem
         background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
@@ -72,15 +71,17 @@
     background: linear-gradient(180deg, rgba(27,8,21,1) 0%, rgba(41,12,32,1) 100%)
     display: flex
     height: 100%
+    width: 100vw
     justify-content: flex-start
     align-items: center
-    padding: 0 10rem
     .text-container
+      padding: 7rem
       width: 55%
       height: 70vh
       display: flex
+      text-wrap: pretty
       flex-direction: column
-      font-size: 1.2em
+      font-size: 1.5em
       color: #f8e7f3
       .caption
         height: 20%
@@ -88,15 +89,37 @@
         display: flex
         justify-content: start
         align-items: start
-        font-size: 72px
+        font-size: 5rem
         background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
-        span
-          font-size: 5.5rem
+      .description
+        overflow: auto
+          
     .knowledge
-      width: 30%
-
+      display: flex
+      align-items: center
+      justify-content: start
+      flex-direction: column
+      width: 45%
+      height: 70vh
+      .caption
+        margin-top: 2rem
+        font-size: 3.5rem
+        background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+      .skill
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        svg
+          margin: 5px
+          width: 60px
+          height: 60px
+        .lvl
+          margin: 5px
   section#projects
     background: rgb(24,7,19)
     width: 100vw
@@ -106,6 +129,7 @@
     justify-content: center
     height: 100vh
     .caption
+      font-weight: 500
       display: flex
       justify-content: center
       align-items: center
@@ -118,7 +142,6 @@
     .projects-container
       width: 100vw
       height: 60%
-
       display: flex
       align-items: center
       justify-content: center
@@ -126,19 +149,112 @@
       .scroll
         width: 85%
         display: flex
-        justify-content: start
+        justify-content: center
         align-items: center
         overflow-y: auto
         .project-card
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          cursor: pointer
           margin: 80px
-          min-width: 400px
-          height: 500px
+          height: 300px
           border-radius: 40px
+          min-width: 400px
           max-height: fit-content
-          background-color: #82263a
+          text-align: center
+          text-wrap: pretty
+          max-width: 400px
+          background: rgb(221,136,198)
+          background: linear-gradient(329deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
+          font-size: 1.2rem
+          transition: 0.5s
+          h1
+            height: 30%
+            font-weight: 1000
+            color: #2b0d22
+            font-size: 2rem
+          .description
+            color: white
+          .status
+            color: #82263a
+            margin-top: 10px
+            font-size: 1rem
+            font-style: italic
+          .technologies
+            margin: 20px 0
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: row
+            flex-wrap: wrap
+            width: 100%
+            .svg-container
+              margin: 0 10px
+              width: 50px
 
+        .project-card:hover
+          -webkit-box-shadow: 0px 0px 26px -7px #DD88C6
+          -moz-box-shadow: 0px 0px 26px -7px #DD88C6
+          box-shadow: 0px 0px 26px -7px #DD88C6
   section#contact
     background: rgb(24,7,19)
     width: 100vw
+    height: 100vh
     background: linear-gradient(180deg, rgba(55,16,43,1) 0%, rgba(96,28,76,1) 100%)
     margin-bottom: -10px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .caption
+      font-weight: 500
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100vw
+      height: 30%
+      font-size: 72px
+      background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+    .contact-cards-container
+      align-items: center
+      justify-content: space-between
+      display: flex
+      width: 20vw
+      .card
+        width: auto
+        height: auto
+        border-radius: 20px 
+        display: flex
+        flex-direction: column
+        justify-content: end
+        align-items: center
+        cursor: pointer
+        color: white    
+        .svg
+          width: 80px
+          height: auto
+          transition: 0.5s
+      .card:hover
+        .svg
+          translate: 0 -20px
+          filter: drop-shadow(0px 0px 70px rgb(212, 125, 255))
+  .copy-mail
+    margin-top: 5%
+    display: flex
+    cursor: pointer
+    justify-content: center
+    align-items: center
+    color: white
+    transition: 0.5s
+    svg
+      width: 40px
+      height: auto
+  .copy-mail:hover
+    translate: 0 -20px
+    filter: drop-shadow(0px 0px 70px rgb(212, 125, 255))
+    svg 
+
