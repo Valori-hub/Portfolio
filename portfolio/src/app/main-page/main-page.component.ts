@@ -13,6 +13,7 @@ import 'aos/dist/aos.css';
 })
 export class MainPageComponent implements OnInit, OnDestroy {
   private scrollListener: (() => void) | undefined;
+  isCoppied: boolean = false;
   title = 'portfolio';
   currentLang: keyof typeof this.langData = 'pl';
   langData = {
@@ -353,33 +354,37 @@ export class MainPageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     AOS.init({
-      once: false,
-      mirror: true,
+      once: true,
+      mirror: false,
     });
+
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('header nav a');
+    window.addEventListener(
+      'scroll',
+      () => {
+        const scrollY = window.scrollY;
+        console.log();
+        sections.forEach((sec) => {
+          console.log(sec);
+          const offset = sec.offsetTop - 100;
+          const height = sec.offsetHeight;
+          const id = sec.getAttribute('id');
 
-    this.scrollListener = this.renderer.listen('window', 'scroll', () => {
-      const scrollY = window.scrollY;
-
-      sections.forEach((sec) => {
-        const offset = sec.offsetTop - 150;
-        const height = sec.offsetHeight;
-        const id = sec.getAttribute('id');
-
-        if (id && scrollY >= offset && scrollY < offset + height) {
-          navLinks.forEach((link) => {
-            link.classList.remove('active');
-            const href = link.getAttribute('href');
-            if (href && href.includes(id)) {
-              link.classList.add('active');
-            }
-          });
-        }
-      });
-    });
+          if (id && scrollY >= offset && scrollY < offset + height) {
+            navLinks.forEach((link) => {
+              link.classList.remove('active');
+              const href = link.getAttribute('href');
+              if (href && href.includes(id)) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      },
+      true
+    );
   }
-
   switchLanguage(lang: keyof typeof this.langData) {
     this.currentLang = lang;
   }
@@ -392,7 +397,10 @@ export class MainPageComponent implements OnInit, OnDestroy {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        alert('Tekst skopiowany: ' + text);
+        this.isCoppied = true;
+        setTimeout(() => {
+          this.isCoppied = false;
+        }, 4000);
       })
       .catch((err) => {
         console.error('Nie udało się skopiować tekstu: ', err);

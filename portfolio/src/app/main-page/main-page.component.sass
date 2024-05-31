@@ -1,15 +1,11 @@
 .main-container
-  min-width: 100vw
-  min-height: 100vh
   header
     position: fixed
-    top: 0
-    left: 0
-    padding: 20px 120px
+    padding: 1vw 3vw
     display: flex
     align-items: center
     justify-content: start
-    z-index: 100
+    z-index: 10
     background-color: #180713
     width: 100vw
     height: 5vh
@@ -20,25 +16,26 @@
       justify-content: start
       align-items: center
       a
+        margin: 1vw
         text-decoration: none
         color: #f8e7f3
-        margin-left: 40px
-        font-size: 1.5rem
+        font-size: 1.4vw  
         font-weight: 500
         transition: 0.4s
       a:hover,a.active
         color: #82263a
     .lang
       width: 40%
-      height: 100%
+      height: 70%
       display: flex
       justify-content: end
       svg
-        width: 50px
-        margin-left: 40px
+        width: auto
+        height: 100%
+        margin-left: 5%
         cursor: pointer
       svg:active
-        opacity: 0.7
+        opacity: 0.7 
 
   section
     top: 0
@@ -47,26 +44,27 @@
     min-width: 100vw
     background-color: transparent
   section#home
-    color: white
-    display: flex
     min-height: 100vh
     min-width: 100vw
     background: rgb(24,7,19)
+    color: #f8e7f3
+    display: flex
+    font-size: 5vw
+    background: rgb(24,7,19)
     background: linear-gradient(180deg, rgba(24,7,19,1) 0%, rgba(27,8,21,1) 100%)
     .left-text-cotainer
-      padding: 10rem
-      width: 100vw
+      padding: 5%
+      width: 100%
       display: flex
       flex-direction: column
       justify-content: center
       align-items: start
       span
-        font-size: 8rem
         background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
   section#about
-    color: white
+    color: #f8e7f3
     background: rgb(24,7,19)
     background: linear-gradient(180deg, rgba(27,8,21,1) 0%, rgba(41,12,32,1) 100%)
     display: flex
@@ -75,115 +73,120 @@
     justify-content: flex-start
     align-items: center
     .text-container
-      padding: 7rem
+      padding: 5% 0
+      padding-left: 5% 
       width: 55%
-      height: 70vh
+      height: 80vh
       display: flex
       text-wrap: pretty
       flex-direction: column
-      font-size: 1.5em
+      font-size: 2.5vmin
       color: #f8e7f3
       .caption
         height: 20%
-        margin-bottom: 2.5rem
+        margin-bottom: 5%
         display: flex
         justify-content: start
         align-items: start
-        font-size: 5rem
+        font-size: 6vw
         background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
       .description
         overflow: auto
-          
     .knowledge
       display: flex
       align-items: center
       justify-content: start
       flex-direction: column
-      width: 45%
-      height: 70vh
+      padding: 5% 0
+      width: 40%
+      height: 80vh
       .caption
-        margin-top: 2rem
-        font-size: 3.5rem
+        margin-bottom: 2vh
+        font-size: 3.5vw
         background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
       .skill
+        margin: 0.2vw
+        height: 6%
         width: 100%
         display: flex
         justify-content: center
         align-items: center
         svg
-          margin: 5px
-          width: 60px
-          height: 60px
+          height: 100%
+          width: 7%
         .lvl
-          margin: 5px
+          font-size: 1.2vw
+          margin: 0.2vw
   section#projects
-    background: rgb(24,7,19)
-    width: 100vw
     background: linear-gradient(180deg, rgba(41,12,32,1) 0%, rgba(55,16,43,1) 100%)
     display: flex
     flex-direction: column
     justify-content: center
-    height: 100vh
+    align-items: center
     .caption
+      padding: 5% 0
       font-weight: 500
       display: flex
       justify-content: center
       align-items: center
-      width: 100vw
-      height: 30%
-      font-size: 72px
+      width: 100%
+      height: 20%
+      font-size: 5vw
       background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
       -webkit-background-clip: text
       -webkit-text-fill-color: transparent
     .projects-container
       width: 100vw
-      height: 60%
+      height: 80%
       display: flex
       align-items: center
       justify-content: center
       overflow: hidden
       .scroll
-        width: 85%
+        width: 100%
+        height: auto
+        padding: 2% 0
         display: flex
-        justify-content: center
+        flex-direction: row
         align-items: center
+        justify-content: center
+        flex-wrap: wrap
         overflow-y: auto
         .project-card
-          display: flex
-          flex-direction: column
-          justify-content: center
+          padding: 0 1vw
+          display: grid
+          grid-template-columns: 1fr
+          grid-template-rows: repeat(5, 1fr)
           align-items: center
-          cursor: pointer
-          margin: 80px
-          height: 300px
-          border-radius: 40px
-          min-width: 400px
-          max-height: fit-content
+          justify-items: center
           text-align: center
-          text-wrap: pretty
-          max-width: 400px
-          background: rgb(221,136,198)
-          background: linear-gradient(329deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
-          font-size: 1.2rem
-          transition: 0.5s
+          width: 420px
+          height: 350px
+          margin: 1.5%
+          background-color: #82263a
+          border-radius: 2vh
+          font-size: 20px
+          font-weight: 400
+          box-shadow: 0 0 1vw #000000 
           h1
             height: 30%
             font-weight: 1000
             color: #2b0d22
-            font-size: 2rem
+            font-size: 42px
           .description
             color: white
           .status
-            color: #82263a
-            margin-top: 10px
-            font-size: 1rem
+            color: #dd88c6
+            margin-top: 2%
+            font-size: 20px
             font-style: italic
           .technologies
-            margin: 20px 0
+            margin: 10% 0
+            height: auto
             display: flex
             justify-content: center
             align-items: center
@@ -191,43 +194,42 @@
             flex-wrap: wrap
             width: 100%
             .svg-container
-              margin: 0 10px
+              margin: 0 3%
               width: 50px
 
         .project-card:hover
-          -webkit-box-shadow: 0px 0px 26px -7px #DD88C6
-          -moz-box-shadow: 0px 0px 26px -7px #DD88C6
-          box-shadow: 0px 0px 26px -7px #DD88C6
+          -webkit-box-shadow: 0px 0px 2.3vw -0.8vw #DD88C6
+          -moz-box-shadow: 0px 0px 2.3vw -0.8vw #DD88C6
+          box-shadow: 0px 0px 2.3vw -0.8vw #DD88C6
   section#contact
     background: rgb(24,7,19)
-    width: 100vw
-    height: 100vh
     background: linear-gradient(180deg, rgba(55,16,43,1) 0%, rgba(96,28,76,1) 100%)
-    margin-bottom: -10px
+    margin-bottom: -1vw 
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+    font-size: 1vw
     .caption
-      font-weight: 500
+      font-weight: 600
       display: flex
       justify-content: center
       align-items: center
       width: 100vw
       height: 30%
-      font-size: 72px
+      font-size: 5vw
       background: -webkit-linear-gradient(290deg, rgba(221,136,198,1) 0%, rgba(205,81,95,1) 100%)
       -webkit-background-clip: text
       -webkit-text-fill-color: transparent
     .contact-cards-container
       align-items: center
+      margin: 5vw 0
       justify-content: space-between
       display: flex
-      width: 20vw
+      width: 30vw
       .card
         width: auto
         height: auto
-        border-radius: 20px 
         display: flex
         flex-direction: column
         justify-content: end
@@ -235,26 +237,45 @@
         cursor: pointer
         color: white    
         .svg
-          width: 80px
+          width: 5vw
           height: auto
           transition: 0.5s
       .card:hover
         .svg
-          translate: 0 -20px
-          filter: drop-shadow(0px 0px 70px rgb(212, 125, 255))
-  .copy-mail
-    margin-top: 5%
-    display: flex
+          translate: 0 -2.5vh
+          filter: drop-shadow(0px 0px 5vw rgb(212, 125, 255))
+  .copy-mail-main
+    // min-width: 80px
+    // min-height: 15px
+    border-radius: 1vw
+    background: -webkit-linear-gradient(220deg, rgba(221,136,198,1) 0%, #c86570 100%)
+    border-color: #180713
+    border-style: solid
+    border-width: 0.15vw
     cursor: pointer
-    justify-content: center
-    align-items: center
-    color: white
+    color: #180713
     transition: 0.5s
-    svg
-      width: 40px
-      height: auto
-  .copy-mail:hover
-    translate: 0 -20px
-    filter: drop-shadow(0px 0px 70px rgb(212, 125, 255))
-    svg 
-
+    display: flex
+    align-items: center
+    justify-content: center
+    .copy-mail-container
+      display: flex
+      flex-direction: row
+      .svg
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 1.2% 2.5%
+        width: 3vw
+        height: auto
+        border-right-color: #180713
+        border-width: 0.15vw
+        border-style: none solid none none 
+      span
+        padding: 1.2% 2.5%
+  .copy-mail-main:hover
+    translate: 0 -0.5vh
+    filter: drop-shadow(0px 0px 5vw rgb(212, 125, 255))
+  .copy-mail-main:active
+    scale: 105%
+    filter: drop-shadow(0px 0px 5vw rgb(170, 122, 154))

@@ -125,12 +125,7 @@
   </section>
   <section id="about">
     <div class="text-container">
-      <div
-        class="caption"
-        data-aos="fade-out"
-        data-aos-duration="800"
-        data-aos-delay="500"
-      >
+      <div class="caption" data-aos="fade-in" data-aos-duration="800">
         <span>{{ langData[this.currentLang].sectionAbout.caption }}</span>
       </div>
       <div class="description">
@@ -149,10 +144,10 @@
         <span>{{ langData[this.currentLang].sectionAbout.knowladge }}</span>
       </div>
       <div
+        class="skill"
         data-aos="fade-out"
         data-aos-duration="1700"
         data-aos-delay="1350"
-        class="skill"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -176,10 +171,10 @@
         <span class="lvl">🟣🟣🟣⚪⚪</span>
       </div>
       <div
+        class="skill"
         data-aos="fade-out"
         data-aos-duration="1700"
         data-aos-delay="1500"
-        class="skill"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -202,10 +197,10 @@
         <span class="lvl">🟣🟣🟣🟣⚪</span>
       </div>
       <div
+        class="skill"
         data-aos="fade-out"
         data-aos-duration="1700"
         data-aos-delay="1650"
-        class="skill"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -228,10 +223,10 @@
         <span class="lvl">🟣🟣🟣🟣⚪</span>
       </div>
       <div
+        class="skill"
         data-aos="fade-out"
         data-aos-duration="1700"
         data-aos-delay="1800"
-        class="skill"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 384">
           <path
@@ -241,11 +236,12 @@
         </svg>
         <span class="lvl">🟣🟣🟣🟣⚪</span>
       </div>
+
       <div
+        class="skill"
         data-aos="fade-out"
         data-aos-duration="1700"
         data-aos-delay="1950"
-        class="skill"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -276,10 +272,10 @@
         <span class="lvl">🟣🟣🟣⚪⚪</span>
       </div>
       <div
+        class="skill"
         data-aos="fade-out"
         data-aos-duration="1700"
         data-aos-delay="2100"
-        class="skill"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -311,10 +307,10 @@
         <span class="lvl">🟣🟣🟣⚪⚪</span>
       </div>
       <div
+        class="skill"
         data-aos="fade-out"
         data-aos-duration="1700"
         data-aos-delay="2250"
-        class="skill"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.756 192.756">
           <g fill-rule="evenodd" clip-rule="evenodd">
@@ -340,10 +336,10 @@
         <span class="lvl">🟣🟣🟣⚪⚪</span>
       </div>
       <div
+        class="skill"
         data-aos="fade-out"
         data-aos-duration="1700"
         data-aos-delay="2400"
-        class="skill"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox=".15 .13 799.7 479.69">
           <path
@@ -354,10 +350,10 @@
         <span class="lvl">🟣🟣⚪⚪⚪</span>
       </div>
       <div
+        class="skill"
         data-aos="fade-out"
         data-aos-duration="1700"
         data-aos-delay="2550"
-        class="skill"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -379,11 +375,12 @@
         </svg>
         <span class="lvl">🟣🟣⚪⚪⚪</span>
       </div>
+
       <div
+        class="skill"
         data-aos="fade-out"
         data-aos-duration="1700"
         data-aos-delay="2700"
-        class="skill"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="175.7 78 490.6 436.9">
           <g fill="#61dafb">
@@ -397,10 +394,10 @@
       </div>
 
       <div
+        class="skill"
         data-aos="fade-out"
         data-aos-duration="1700"
         data-aos-delay="2850"
-        class="skill"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -440,12 +437,11 @@
         </svg>
         <span class="lvl">🟣🟣⚪⚪⚪</span>
       </div>
-
       <div
-        data-aos="fade-out"
-        data-aos-duration="1700"
-        data-aos-delay="3000"
         class="skill"
+        data-aos="fade-in"
+        data-aos-duration="1700"
+        data-aos-delay="2800"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -540,6 +536,7 @@
         </div>
         <span>Discord</span>
       </div>
+
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="bottom-bottom"
@@ -589,6 +586,7 @@
         </div>
         <span>Email</span>
       </div>
+
       <div
         data-aos="fade-up"
         data-aos-anchor-placement="bottom-bottom"
@@ -610,36 +608,45 @@
       </div>
     </div>
     <div
-      class="copy-mail"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="1000"
+      data-aos-delay="1100"
+      class="copy-mail-main"
       (click)="
         copyText(langData[this.currentLang].sectionContact.navigation.email)
       "
     >
-      <div
-        class="svg"
-        data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom"
-        data-aos-duration="1000"
-        data-aos-delay="1050"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 -960 960 960"
-          fill="#e8eaed"
-        >
-          <path
-            d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"
-          />
-        </svg>
+      <div class="copy-mail-container">
+        <div class="svg">
+          <svg
+            *ngIf="!isCoppied"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#180713"
+          >
+            <path
+              d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"
+            />
+          </svg>
+          <svg
+            *ngIf="isCoppied"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 32 32"
+            version="1.1"
+          >
+            <g id="surface1">
+              <path
+                d="M 16 3 C 8.832031 3 3 8.832031 3 16 C 3 23.167969 8.832031 29 16 29 C 23.167969 29 29 23.167969 29 16 C 29 8.832031 23.167969 3 16 3 Z M 16 5 C 22.085938 5 27 9.914063 27 16 C 27 22.085938 22.085938 27 16 27 C 9.914063 27 5 22.085938 5 16 C 5 9.914063 9.914063 5 16 5 Z M 22.28125 11.28125 L 15 18.5625 L 10.71875 14.28125 L 9.28125 15.71875 L 14.28125 20.71875 L 15 21.40625 L 15.71875 20.71875 L 23.71875 12.71875 Z "
+              />
+            </g>
+          </svg>
+        </div>
+        <span>{{
+          langData[this.currentLang].sectionContact.navigation.email
+        }}</span>
       </div>
-
-      <span
-        data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom"
-        data-aos-duration="1000"
-        data-aos-delay="1100"
-        >{{ langData[this.currentLang].sectionContact.navigation.email }}</span
-      >
     </div>
   </section>
 </div>
