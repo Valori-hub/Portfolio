@@ -79,6 +79,9 @@
             "styles": ["src/styles.sass", "node_modules/aos/dist/aos.css"],
             "scripts": ["node_modules/aos/dist/aos.js"]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
