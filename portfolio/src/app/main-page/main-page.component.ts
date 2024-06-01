@@ -40,7 +40,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
             name: 'Portfolio',
             description: 'Strona z moim portfolio',
             link: 'https://github.com/Valori-hub/Portfolio',
-            status: 'Prace w toku',
+            status: '',
             technologies: [
               {
                 name: 'sass',
@@ -155,7 +155,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
           project5: {
             name: 'Render_Clicker',
             description: 'Gra mobilna w stylu "clicker"',
-            link: 'https://github.com/Valori-hub/todo-list',
+            link: 'https://github.com/Valori-hub/Render_Clicker',
             status: 'Prace w toku',
             technologies: [
               {
@@ -206,7 +206,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
             name: 'Portfolio',
             description: 'A page with my portfolio',
             link: 'https://github.com/Valori-hub/Portfolio',
-            status: 'Prace w toku',
+            status: '',
             technologies: [
               {
                 name: 'sass',
@@ -226,7 +226,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
             name: 'Melange',
             description: 'A mobile drinkig game',
             link: 'https://github.com/Appology-Studio/Melange_React_Native',
-            status: 'Prace w toku',
+            status: 'Work in progress',
             technologies: [
               {
                 name: 'react-native',
@@ -321,7 +321,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
           project5: {
             name: 'Render_Clicker',
             description: 'A mobile game in the "clicker" style',
-            link: 'https://github.com/Valori-hub/todo-list',
+            link: 'https://github.com/Valori-hub/Render_Clicker',
             status: 'Work in progress',
             technologies: [
               {
@@ -364,9 +364,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
       'scroll',
       () => {
         const scrollY = window.scrollY;
-        console.log();
         sections.forEach((sec) => {
-          console.log(sec);
           const offset = sec.offsetTop - 100;
           const height = sec.offsetHeight;
           const id = sec.getAttribute('id');
@@ -409,7 +407,6 @@ export class MainPageComponent implements OnInit, OnDestroy {
   navToSite(link: string) {
     open(link);
   }
-  changelang() {}
   ngOnDestroy() {
     if (this.scrollListener) {
       this.scrollListener();
